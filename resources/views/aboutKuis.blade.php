@@ -1,5 +1,6 @@
 @extends('master')
 @section('title')
+
 @parent
 <p>Sidebar About.</p>
 <br>

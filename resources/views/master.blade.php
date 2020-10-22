@@ -5,8 +5,8 @@
 		<h1>SELAMAT DATANG!</h1>
 		<nav>
 			<a href="/kuis">HOME</a>
-			<a href="/about">ABOUT</a>
-			<a href="/article">ARTICLE</a>
+			<a href="/aboutKuis">ABOUT</a>
+			<a href="/articleKuis">ARTICLE</a>
 		</nav>
 	<header>
 		<hr/>
@@ -39,6 +39,6 @@
 		<br>
 		<hr/>
 		<p>Terimakasih telah mengunjungi Webiste kami</p>
-	</footer> -->
+	</footer>
 </body>
 </html>

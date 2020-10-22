@@ -8,7 +8,6 @@ use \Cache;
 class homeKuisController extends Controller
 {
      public function index(){
-
      		 return view('homeKuis');
     }
 }
