@@ -34,7 +34,7 @@ class ArticleController extends Controller
  $article = Article::find($id);
  $article->title = $request->title;
  $article->content = $request->content;
- $article->featured_image = $request->image;
+ $article->imageUrl = $request->image;
  $article->save();
  return redirect('/manage');
  }
