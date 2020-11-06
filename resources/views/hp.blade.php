@@ -29,21 +29,48 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="homeKuis">Home
+          <!-- <li class="nav-item active"> -->
+            <!-- <a class="nav-link" href="homeKuis">Home -->
+           
+          <!-- </li> -->
+          <li class="nav-item">
+            @can('homeKuis')
+            <a class="nav-link" href="{{ url('homeKuis') }}">Home
+              @endcan
+             </a>
           </li>
           <li class="nav-item">
+            @can('homeKuis')
+            <a class="nav-link" href="{{ url('aboutKuis') }}">Knowledge
+              @endcan
+             </a>
+          
+          </li>
+
+          <!-- <li class="nav-item">
             <a class="nav-link" href="aboutKuis">Knowledge</a>
+          </li> -->
+          <li class="nav-item">
+            @can('homeKuis')
+            <a class="nav-link" href="{{ url('tentangKuis') }}">Tentang
+              @endcan
+             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="tentangKuis">Tentang</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contactKuis">Contact</a>
-          </li>
-          <li class="nav-item">
+            @can('homeKuis')
+            <a class="nav-link" href="{{ url('contactKuis') }}">contact
+              @endcan
+             </a>
+             </li>
+          <!-- <li class="nav-item">
             <a class="nav-link" href="manage">Kelola</a>
+          </li> -->
+          <li class="nav-item">
+            @can('manage')
+            <a class="nav-link" href="{{ url('manage') }}">Kelola</a>
+            @endcan
           </li>
+
           <li class="nav-item dropdown">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 {{ Auth::user()->name }} <span class="caret"></span>

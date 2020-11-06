@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use Illuminate\Supprt\Facades\Cache;
+use Illuminate\Support\Facades\Gate;
 
-
-use \Cache;
 class HomeController extends Controller
 {
     /**

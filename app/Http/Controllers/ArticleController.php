@@ -4,10 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
-use \Cache;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Gate;
 
 class ArticleController extends Controller
 {
+    public function __construct()
+    {
+     //$this->middleware('auth');
+     $this->middleware(function($request, $next){
+     if(Gate::allows('manage')) return $next($request);
+     abort(403, 'Anda tidak memiliki cukup hak akses');
+     });
+    }
+    
     public function index(){
  $article = Article::all();
  return view('manage',['article' => $article]);
