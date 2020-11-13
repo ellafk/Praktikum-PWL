@@ -6,8 +6,9 @@
 </div>
 </br>
 </br>
-<form action="/article/update/{{$article->id}}" method="post">
- {{csrf_field()}}
+<form action="/article/update/{{$article->id}}" method="post"
+enctype="multipart/form-data">
+ @csrf
  <input type="hidden" name="id" value="{{$article->id}}"></br>
  <div class="form-group">
  <label for="title">Judul</label>
@@ -19,9 +20,10 @@
  </div>
  <div class="form-group">
  <label for="image">Feature Image</label>
- <input type="text" class="form-control" required="required" name="image" value="{{$article->imageUrl}}"></br>
+ <input type="file" class="form-control" required="required" name="image" value="{{$article->imageUrl}}"></br>
+ <img width="150px" src="{{asset('storage/'.$article->imageUrl)}}">
  </div>
- <button type="submit" name="edit" class="btn btn-primary float-right">Ubah Data</button>
- </form>
+ <button type="submit" name="edit" class="btn btn-primary floatright">Ubah Data</button>
+</form>
  </div>
  </div>

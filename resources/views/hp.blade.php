@@ -67,7 +67,7 @@
           </li> -->
           <li class="nav-item">
             @can('manage')
-            <a class="nav-link" href="{{ url('manageUser') }}">Kelola</a>
+            <a class="nav-link" href="{{ url('manage') }}">Kelola</a>
             @endcan
           </li>
 
