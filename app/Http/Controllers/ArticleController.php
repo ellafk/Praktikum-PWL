@@ -21,12 +21,12 @@ class ArticleController extends Controller
     }
     
     public function index(){
- $article = Article::all();
- return view('manage',['article' => $article]);
- }
- public function add(){
- return view('addarticle');
- }
+    $article = Article::all();
+    return view('manage',['article' => $article]);
+    }
+    public function add(){
+    return view('addarticle');
+    }
 
  public function create(Request $request)
 {
@@ -46,7 +46,7 @@ class ArticleController extends Controller
  $article = Article::find($id);
  return view('editarticle',['article'=>$article]);
  }
-//p8
+//p10
  public function update($id, Request $request)
 {
  $article = Article::find($id);

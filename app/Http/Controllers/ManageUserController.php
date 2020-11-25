@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Gate;
+use PDF;
 class ManageUserController extends Controller
 {
     public function __construct(){
@@ -23,11 +24,15 @@ class ManageUserController extends Controller
         return view('add');
     }
     public function create(Request $request){
+        if($request->file('image')){
+            $image_name = $request->file('image')->store('imagesUser','public');
+            }
         User::create([
         'name' => $request->name,
         'email' => $request->email,
         'password' => \Hash::make ($request->password),
-        'roles' => $request->roles
+        'roles' => $request->roles,
+        'profile' => $image_name,
     ]);
         return redirect('/manageUser'); 
     }
@@ -41,7 +46,17 @@ class ManageUserController extends Controller
         $user->email = $request->email;
         $user->password = \Hash::make($request->password);
         $user->roles = $request->roles;
+        
+        if($user->profile && file_exists(storage_path('app/public/' . $user->profile)))
+        {
+        \Storage::delete('public/'.$user->profile);
+        }
+        
+        $image_name = $request->file('image')->store('imagesUser', 'public');
+        $user->profile = $image_name;
+
         $user->save();
+
         return redirect('/manageUser');
     }
     public function delete($id){
@@ -49,4 +64,10 @@ class ManageUserController extends Controller
         $user->delete();
         return redirect('/manageUser');
     }
+    public function cetak_pdf(){
+        $user = User::all();
+        $pdf = PDF::loadview('user_pdf',['user'=>$user]);
+        return $pdf->stream();
+       }
+       
 }

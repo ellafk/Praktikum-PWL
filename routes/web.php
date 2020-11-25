@@ -30,4 +30,6 @@ Route::post('/manageUser/create','ManageUserController@create');
 Route::get('/manageUser/editUser/{id}','ManageUserController@edit');
 Route::post('/manageUser/update/{id}','ManageUserController@update');
 Route::get('/manageUser/delete/{id}','ManageUserController@delete');
+Route::get('/manageUser/cetak_pdf', 'ManageUserController@cetak_pdf');
+
 

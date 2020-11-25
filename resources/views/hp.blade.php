@@ -39,35 +39,27 @@
               @endcan
              </a>
           </li>
-          <li class="nav-item">
-            @can('homeKuis')
-            <a class="nav-link" href="{{ url('aboutKuis') }}">Knowledge
-              @endcan
-             </a>
-          
-          </li>
-
           <!-- <li class="nav-item">
             <a class="nav-link" href="aboutKuis">Knowledge</a>
           </li> -->
+
           <li class="nav-item">
             @can('homeKuis')
-            <a class="nav-link" href="{{ url('tentangKuis') }}">Tentang
-              @endcan
+            <a class="nav-link" href="{{ url('contactKuis') }}">Contact
+            @endcan
              </a>
           </li>
-          <li class="nav-item">
-            @can('homeKuis')
-            <a class="nav-link" href="{{ url('contactKuis') }}">contact
-              @endcan
-             </a>
-             </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="manage">Kelola</a>
-          </li> -->
+
           <li class="nav-item">
             @can('manage')
-            <a class="nav-link" href="{{ url('manage') }}">Kelola</a>
+            <a class="nav-link" href="{{ url('manageUser') }}">Kelola User
+            @endcan
+             </a>
+          </li>
+
+          <li class="nav-item">
+            @can('manage')
+            <a class="nav-link" href="{{ url('manage') }}">Kelola Admin</a>
             @endcan
           </li>
 
@@ -113,7 +105,7 @@
           <div class="card-body">
             <h2 class="card-title">{{$li -> title}}</h2>
             <p class="card-text">{{Str::limit($li->content, 100, "...")}}</p>
-            <a href="{{ './articleKuis/'.$li->id }}" class="btn btn-primary">Read More &rarr;</a>
+            <a href="{{  url ('aboutKuis') }}" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on October, 2020 by Ella
@@ -128,7 +120,7 @@
           <div class="card-body">
             <h2 class="card-title">{{$li -> title}}</h2>
             <p class="card-text">Pentingnya menjaga lingkungan wajib harus kita tanamkan sejak dini. Penebangan hutan secara liar/pembalakan hutan, polusi air dari limbah industri dan pertambangan, polusi udara di daerah perkotaan, dan masalah mengenai rusaknya lingkungan kita khususnya di Indonesia bukan merupakan masalah yang baru lagi, yang seharusnya dibenahi sesegera mungkin.</p>
-            <a href="{{ './articleKuis/'.$li->id }}"class="btn btn-primary">Read More &rarr;</a>
+            <a href="{{ url ('tentangKuis')}}"class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on October, 2020 by Ella
@@ -144,7 +136,7 @@
           <div class="card-body">
             <h2 class="card-title">{{$li -> title}}</h2>
             <p class="card-text">Eksploitasi yang dilakukan oleh manusia bisa membuat kondisi dari lingkungan hidup menjadi berubah secara drastis. Berbagai teknologi dan pengetahuan terus digunakan untuk mengambil hasil alam dan merubahnya menjadi lingkungan baru yang berbeda dari kondisi alam awalnya. Berbagai komponen alam dan biotik yang ada bisa menjadi tidak seimbang apabila tidak adanya perasaan untuk sadar dan ikut serta untuk menjaga lingkungan sekitar Anda</p>
-            <a href="{{ './articleKuis/'.$li->id }}" class="btn btn-primary">Read More &rarr;</a>
+            <a href="{{ url ('tentangKuis') }}" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on October, 2020 by Ella

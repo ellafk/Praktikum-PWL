@@ -1,37 +1,10 @@
-@extends('master')
-@section('title')
-
-@parent
-<p>Sidebar About.</p>
-<br>
-@endsection
-
-@section('content')
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
-<body bgcolor="#E9967A">
-<h2 align="center">Kerusakan Lingkungan</h2>
-
-<p>Kerusakan pada lingkungan hidup terjadi karena dua faktor baik fator alami ataupun karena tangan-tangan jahil manusia. Pentingnya lingkungan hidup yang terawat terkadang dilupakan oleh manusia, dan hal ini bisa menjadikan ekosistem serta kehidupan yang tidak maksimal pada lingkungan tersebut.</p>
-
-<p>Berikut beberapa faktor secara mendalam yang menjadikan kerusakan lingkungan hidup.</p>
-<ul>
-<li><b>Faktor alami</b>
-<p>Banyaknya bencana alam dan cuaca yang tidak menentu menjadi penyebab terjadinya kerusakan lingkungan hidup. Bencana alam tersebut bisa berupa banjir, tanah longsor, tsunami, angin puting beliung, angin topan, gunung meletus, ataupun gempa bumi. Selain berbahaya bagi keselamatan manusia maupun mahkluk lainnya, bencana ini akan membuat rusaknya lingkungan.</p></li>
-
-<li><b>Faktor buatan</b>
-<p>Manusia sebagai makhluk berakal dan memiliki kemampuan tinggi dibandingkan dengan makhluk lain akan terus berkembang dari pola hidup sederhana menuju ke kehidupan yang modern. Dengan adanya perkembangan kehidupan, tentunya kebutuhannya juga akan sangat berkembang termasuk kebutuhan eksploitasi sumber daya alam yang berlebihan.
-Kerusakan lingkungan karena faktor manusia bisa berupa adanya penenbangan secara liar yang menyebabkan banjir ataupun tanah longsor, dan pembuangan sampah di sembarang tempat terlebih aliran sungai dan laut akan membuat pencemaran.<p></li>
-</ul>
-</div>
-@endsection
-<br>
-@section('footer')
-<p>Terimakasih telah mengunjungi web kami</p>
-</body>
+	<head>
+	<body bgcolor="ADD8E6">
+	<h3 align="center">Kerusakan Lingkungan</h3>
+	<p>Kerusakan lingkungan adalah deteriorasi lingkungan dengan hilangnya sumber daya air, udara, dan tanah; kerusakan ekosistem dan punahnya fauna liar. Kerusakan lingkungan adalah salah satu dari sepuluh ancaman yang secara resmi diperingatkan oleh High Level Threat Panel dari PBB. The World Resources Institute (WRI), UNEP (United Nations Environment Programme), UNDP (United Nations Development Programme), dan Bank Dunia telah melaporkan tentang pentingnya lingkungan dan kaitannya dengan kesehatan manusia, pada tanggal 1 Mei 1998</p>
+	<p>Kerusakan lngkungan terdiri dari berbagai tipe. Ketika alam rusak dihancurkan dan sumber daya menghilang, maka lingkungan sedang mengalami kerusakan. Environmental Change and Human Health, bagian khusus dari laporan World Resources 1998-99 menjelaskan bahwa penyakit yang dapat dicegah dan kematian dini masih terdapat pada jumlah yang sangat tinggi. Jika perubahan besar dilakukan demi kesehatan manusia, jutaan warga dunia akan hidup lebih lama. Di negara termiskin, satu dari lima anak tidak bisa bertahan hidup hingga usia lima tahun, terutama disebabkan oleh penyakit yang hadir karena keadaan lingkungan yang tidak baik. Sebelas juta anak-anak meninggal setiap tahunnya, terutama disebabkan oleh malaria, diare, dan penyakit pernapasan akut, penyakit yang sesungguhnya sangat mungkin untuk dicegah.</p>
+	</body>
+	</head>
 </html>
-
-@endsection
