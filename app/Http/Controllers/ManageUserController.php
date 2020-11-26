@@ -44,7 +44,7 @@ class ManageUserController extends Controller
         $user = User::find($id);
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = \Hash::make($request->password);
+        $user->password = $request->password;
         $user->roles = $request->roles;
         
         if($user->profile && file_exists(storage_path('app/public/' . $user->profile)))

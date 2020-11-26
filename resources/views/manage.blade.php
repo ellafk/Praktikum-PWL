@@ -15,6 +15,7 @@
  <th>No</th>
  <th>Judul</th>
  <th>Tanggal</th>
+ <th>Gambar</th>
  <th></th>
  </tr>
  </thead>
@@ -24,6 +25,7 @@
  <td>{{$a->id}}</td>
  <td>{{$a->title}}</td>
  <td>{{$a->created_at}}</td>
+ <td><img width="90px" src="{{asset('/storage/'.$a->imageUrl)}}" alt=""></td>
  <td>
  
  <a href="article/edit/{{ $a->id }}" class="badge badge-warning">Edit</a>

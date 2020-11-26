@@ -20,7 +20,6 @@ enctype="multipart/form-data">
  <div class="form-group">
  <label for="image">Feature Image</label>
  <input type="file" class="form-control" required="required" name="image"></br>
- <img width="150px" src="{{asset('/storage/'.$article->imageUrl)}}">
 </div>
 
  <button type="submit" name="add" class="btn btn-primary float-right">Tambah Data</button>
